@@ -109,6 +109,7 @@
         }else{ //assumed it is inline and there is no other div or carousel.
             $this.click(function(e){
                 $this.removeClass($this.selector.replace(/[\#.]/g, "")).css({'background':'#000'});
+                $this.unbind("click");
                 $this.html(BCHTML);
                 checkBC();
 
